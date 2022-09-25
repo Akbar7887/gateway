@@ -15,6 +15,14 @@ spring:
           uri: lb://tasbackend
           predicates:
             - Path=/api/**,/custom/**,/login/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:8087"
+            allowedHeaders: "*"
+            allowedMethods:
+                - GET
+                - POST
 
 #eureka:
 #  client:
